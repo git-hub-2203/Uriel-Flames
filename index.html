@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Sensores | Termotech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="dashboard">
+        <header class="page-header">
+            <div class="brand-mark" aria-hidden="true">T</div>
+            <p class="eyebrow">TERMOTECH · ESP32</p>
+            <h1>Monitoramento</h1>
+            <p class="intro">Leitura em tempo real dos sensores conectados.</p>
+        </header>
+
+        <section class="sensor-grid" aria-label="Leituras dos sensores">
+            <article class="sensor-card">
+                <div class="sensor-icon temperature-icon" aria-hidden="true">°</div>
+                <p class="sensor-label">Temperatura</p>
+                <p class="sensor-reading"><span id="temperature-value">--</span><span class="unit">°C</span></p>
+                <p id="temperature-status" class="sensor-status">Aguardando leitura...</p>
+            </article>
+
+            <article class="sensor-card">
+                <div class="sensor-icon humidity-icon" aria-hidden="true">%</div>
+                <p class="sensor-label">Umidade</p>
+                <p class="sensor-reading"><span id="humidity-value">--</span><span class="unit">%</span></p>
+                <p id="humidity-status" class="sensor-status">Aguardando leitura...</p>
+            </article>
+        </section>
+
+        <section class="led-card" aria-labelledby="led-title">
+            <div>
+                <p class="sensor-label">Controle</p>
+                <h2 id="led-title">LED</h2>
+                <p id="led-status" class="sensor-status" role="status" aria-live="polite">
+                    Aguardando estado do LED...
+                </p>
+            </div>
+            <button id="led-toggle" class="led-toggle" type="button" disabled>
+                Carregando...
+            </button>
+        </section>
+
+        <p id="connection-status" class="connection-status" role="status" aria-live="polite">
+            Conectando ao banco de dados...
+        </p>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

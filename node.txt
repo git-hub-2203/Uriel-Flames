@@ -1,0 +1,9 @@
+ apiKey: "AIzaSyBB4XVurihnpUILd3rmECnbaJrVUhmL70o",
+  authDomain: "termotech-740c1.firebaseapp.com",
+  databaseURL: "https://termotech-740c1-default-rtdb.firebaseio.com",
+  projectId: "termotech-740c1",
+  storageBucket: "termotech-740c1.firebasestorage.app",
+  messagingSenderId: "671626210689",
+  appId: "1:671626210689:web:0500fce94b0a255b4ecc80",
+  measurementId: "G-YH05EXB3FB"
+  

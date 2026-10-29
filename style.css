@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(35, 115, 230, 0.09), transparent 30%),
+        #f4f7fb;
+    color: #17243b;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.dashboard {
+    width: min(100%, 760px);
+}
+
+.page-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #eaf2ff;
+    color: #1769d2;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.eyebrow {
+    margin: 18px 0 8px;
+    color: #1769d2;
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(30px, 7vw, 40px);
+    letter-spacing: -0.045em;
+}
+
+.intro {
+    margin: 10px 0 0;
+    color: #69778c;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.sensor-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(29, 52, 86, 0.08);
+}
+
+.led-card {
+    margin-top: 20px;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(29, 52, 86, 0.08);
+}
+
+h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.sensor-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.temperature-icon {
+    background: #fff0e9;
+    color: #dc6236;
+}
+
+.humidity-icon {
+    background: #eaf2ff;
+    color: #1769d2;
+}
+
+.sensor-label {
+    margin: 22px 0 8px;
+    color: #69778c;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sensor-reading {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin: 0;
+    color: #17243b;
+    font-size: clamp(42px, 9vw, 58px);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.unit {
+    color: #69778c;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.sensor-status {
+    min-height: 20px;
+    margin: 14px 0 0;
+    color: #8290a3;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.led-card .sensor-label {
+    margin: 0 0 6px;
+}
+
+.led-card .sensor-status {
+    margin-top: 6px;
+}
+
+.led-toggle {
+    min-width: 132px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: #1769d2;
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.led-toggle:hover:not(:disabled) {
+    background: #1258b4;
+}
+
+.led-toggle:focus-visible {
+    outline: 3px solid rgba(23, 105, 210, 0.3);
+    outline-offset: 3px;
+}
+
+.led-toggle:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.connection-status {
+    margin: 20px 0 0;
+    color: #167447;
+    font-size: 13px;
+    text-align: center;
+}
+
+.connection-status.error {
+    color: #b42318;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    .sensor-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .sensor-card {
+        padding: 24px;
+    }
+
+    .led-card {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 22px 24px;
+    }
+}
